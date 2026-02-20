@@ -1,0 +1,17 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  /* Sidebar and content scroll independently if needed, or content scrolls */
+  height: calc(100vh - 90px);
+  /* Subtract player bar height */
+}

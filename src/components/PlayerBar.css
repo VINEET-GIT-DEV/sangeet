@@ -1,0 +1,226 @@
+.player-bar {
+    height: 90px;
+    background-color: #181818;
+    /* Dark grey similar to footer */
+    border-top: 1px solid #282828;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 200;
+}
+
+.player-left {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    min-width: 180px;
+}
+
+.current-song-img {
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    margin-right: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+}
+
+.youtube-container {
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    margin-right: 14px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #000;
+    position: relative;
+}
+
+.youtube-player,
+.youtube-player iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.current-song-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+}
+
+.current-song-title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.current-song-artist {
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+.like-icon {
+    color: var(--text-secondary);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.like-icon:hover {
+    color: #fff;
+}
+
+.player-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    max-width: 722px;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.control-icon {
+    color: var(--text-secondary);
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.control-icon:hover {
+    color: #fff;
+}
+
+.play-pause-btn {
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.play-pause-btn:hover {
+    transform: scale(1.05);
+}
+
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+
+.time-current,
+.time-total {
+    font-size: 11px;
+    color: var(--text-secondary);
+    min-width: 32px;
+    text-align: center;
+}
+
+.progress-bar-bg {
+    flex: 1;
+    height: 4px;
+    background-color: #4d4d4d;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+}
+
+.progress-bar-fill {
+    background-color: #fff;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.progress-bar-bg:hover .progress-bar-fill {
+    background-color: var(--accent);
+    /* Turn accent color on hover */
+}
+
+.player-right {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100px;
+}
+
+/* Spotify Style Volume Slider */
+.spotify-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(to right, #fff var(--val), #4d4d4d var(--val));
+    outline: none;
+    cursor: pointer;
+}
+
+.spotify-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.spotify-slider:hover {
+    background: linear-gradient(to right, #1db954 var(--val), #4d4d4d var(--val));
+}
+
+.spotify-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: opacity 0.1s;
+    margin-top: -4px;
+    /* offset to center vertically */
+}
+
+.spotify-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: opacity 0.1s;
+    border: none;
+}
+
+.spotify-slider:hover::-webkit-slider-thumb {
+    opacity: 1;
+}
+
+.spotify-slider:hover::-moz-range-thumb {
+    opacity: 1;
+}
+
+.active-like {
+    color: #1db954 !important;
+    /* Spotify Green */
+}
